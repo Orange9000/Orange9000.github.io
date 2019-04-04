@@ -1,0 +1,273 @@
+* {
+  box-sizing: border-box;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+/*---фикс для гугловского иконочного шрифта, без него
+иконки идут не совсем ровно с текстом ---*/
+i {
+  vertical-align: middle;
+}
+
+
+
+/*---------классы для многкратного использования ----------*/
+
+.blocky { display: block;}
+
+.pad-bot { padding-bottom: 25px; }
+
+.play-font { font-family: "Play", "Arial";}
+
+.m-font { font-family: "Montserrat", "Arial";}
+
+.russo-font { font-family: "Russo One", "Arial";}
+
+.rub-font { font-family: "Rubik", "Arial";}
+
+.bold { font-weight: bold;}
+
+.f-color { color: #545e69; }
+
+.centering { text-align: center; margin: 0 auto;}
+
+.greeny { color: #54ba4e; }
+
+.pad-ns { padding: 20px 0 20px 0; }
+
+.icon-style { color: #dae3e7;}
+
+.pointer { cursor: pointer;}
+
+.opac { opacity: 0.8;}
+
+.l-spacing { letter-spacing: 1px;}
+
+.v-al { vertical-align: middle; }
+
+.i-b { display: inline-block; }
+
+
+
+/*---------переключатель язка--------*/
+
+.lang-switch {
+  bottom: 95%;
+  left: 98%;
+  position: fixed;
+  cursor: pointer;
+  float: right;
+  z-index: 1;
+}
+.lang-switch i {
+  font-size: 30px;
+}
+
+
+
+/*----------------------голова------------------------------*/
+
+.top {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 250px;
+}
+  .top-bar {
+    display: block;
+    height: 10px;
+    background-color: #778492;
+  }
+  .nav-container {
+    height: 235px;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .photo-container {
+    margin-right: 5px;
+    display: block;
+    content: "";
+    height: 150px;
+    width: 150px;
+    background-color: #778492;
+    border-radius: 50%;
+    background: url('src/pics/placeholder.jpg'); /* image from vectorstock.com */
+    background-size: contain;
+  }
+  .description {
+    margin-right: auto; /* оверрайд space-between для позиционирования влево */
+    display: flex;
+    flex-direction: column;
+  }
+  .contact {
+    cursor: pointer;
+    display: block;
+    width: 150px;
+    height: 50px;
+    background-color: #54ba4e;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 10px;
+    font-size: 20px;
+
+  }
+    .contact:hover{
+      background-color: #49ac43;
+    }
+
+
+/*----обёртка для всего, что под панелью навигации и выше футера ------*/
+
+.wrapper {
+  min-height: 1200px;
+  background-color: #dae3e7;
+}
+
+/*----контейнер для контента ниже навигации и выше футера ----*/
+
+.content {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  margin: 0 auto;
+}
+  main { width: 70%; } /* левый контейнер */
+  aside { width: 30%; } /* правый контейнер */
+
+  main, aside { /* для fadeIn лавных блоков */
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+
+/*-----------общие стили контейнеров для текста и пр. --------*/
+
+.contacts, .skills, .folio, .about, .languages {
+  background-color: white;
+  margin: 10px 10px;
+  padding: 30px 30px;
+}
+
+.folio {
+  min-height: 700px;
+}
+
+
+/*---------cтили контейнеров------------*/
+
+.folio li {
+  border-top: 1px solid rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+  .img-container {
+    display: block;
+    overflow-y: scroll;
+    height: 300px;
+    margin: 5px 0 10px 0;
+    border: 1px solid rgba(84, 186, 78, 0.5);
+  }
+    .img-container img {
+      display: block;
+      width: 100%;
+      object-fit: scale-down;
+      opacity: 0.4;
+      transition: all .3s linear;
+    }
+    .img-container img:hover {
+      opacity: 1;
+    }
+
+
+/*-----------aside----------*/
+
+
+.contacts li, .languages li, .skills li {
+  margin-bottom: 10px;
+}
+  .bar {
+    position: relative;
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 20px;
+    background-color: #e8e8e8;
+  }
+    .full {
+      position: absolute;
+      background-color: #54ba4e;
+      transition: all 3s linear;
+    }
+    .sk1, .sk2, .sk3 {width: 0%;}
+
+
+/*----------footer--------------*/
+
+
+
+footer {
+  display: block;
+  height: 50px;
+  background-color: #5c6269;
+}
+  .footer-text {
+    display: block;
+    font-size: 12px;
+    color: white;
+    font-style: italic;
+    padding-top: 5px;
+  }
+
+
+/*----------для экранов меньше десктопов и ноутбуков----*/
+
+@media (max-width: 1024px) {
+  main, aside { width: 100%;}
+  .content { width: 90%; }
+  .nav-container { margin: 0 auto; }
+  .top { height: 300px;}
+  .nav-container {
+    padding-top: 5px;
+    justify-content: center;
+  }
+  .photo-container {
+    margin: 0 auto;
+  }
+  .description {
+    margin-right: none;
+    margin: 0 auto;
+  }
+  .nav-container h3 { text-align: center; }
+  .lang-switch {
+    bottom: 90%;
+    left: 90%;
+  }
+
+}
+
+
+
+
+/*--------для переключения языка------*/
+
+.eng {
+  display: none;
+}
+
+.p {
+  transition: all 0.5s linear;
+}
+
+
+
+/*------для тестов--------*/
