@@ -253,6 +253,7 @@ footer {
     bottom: 90%;
     left: 90%;
   }
+  footer { height: 70px; }
 
 }
 
