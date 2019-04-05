@@ -7,6 +7,24 @@ $(document).ready(() => {
     $(".hide_drop").slideToggle();
   })
 
+//----------------------------------------------------------------------
+
+  // скролл до блока при клике/тапе
+
+  var sections = [$('#navbar'),
+                  $('.about'),
+                  $('.expertise'),
+                  $('.team'),
+                  $('.our_works'),
+                  $('.testimonials'),
+                  $('.clients')
+                ].reverse()
+
+  $('.scrollto').on('click', event => {
+      var section = $(event.currentTarget).index()
+      if ($(event.currentTarget).hasClass('nav')) section -= 2
+      sections[section].get(0).scrollIntoView({behavior:'smooth', block:'center'})
+  })
 
 //--------------------------------------------------------------------
 
