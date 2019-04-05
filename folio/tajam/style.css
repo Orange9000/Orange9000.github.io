@@ -31,6 +31,13 @@
   width: 90px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+
+
 
 /*---------------------------*/
 
@@ -334,7 +341,7 @@
     /* используется для элемента галереи */
     /* всплывающее окно dialog из jquery ui */
     .fullsize {
-      
+
     }
 
     .gallery ul {
@@ -523,6 +530,8 @@
         background: rgba(255, 255, 255, 0.4);
         background-image: url("src/footer-img/nl.png");
         background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
       }
       .fb-left, .fb-right {
         padding-left: 30px;
