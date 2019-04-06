@@ -64,8 +64,10 @@ i {
   left: 98%;
   position: fixed;
   cursor: pointer;
-  float: right;
   z-index: 1;
+  border: none;
+  background: none;
+  outline: none;
 }
 .lang-switch i {
   font-size: 30px;
