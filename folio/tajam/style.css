@@ -5,6 +5,11 @@
   padding: 0 0 0 0;
 }
 
+html,body
+{
+  overflow-x: hidden;
+}
+
 /* базовые классы на реюз */
 .roboto { font-family: "Roboto", serif; }
 
@@ -149,7 +154,6 @@ a {
 .about {
   padding: 30px 30px;
   display: inline;
-  padding-top: 2vmax;
 }
 
   .about ul {
@@ -194,7 +198,6 @@ a {
 }
 
   .vid_container span {
-
     position: absolute;
     background: linear-gradient(90deg, #09052f, #311d5e);
     opacity: 0.75;
@@ -598,8 +601,8 @@ a {
     }
 /*-------------видео--------------------------------*/
 
-.vid_container span {
-}
+  .vid_container span {
+  }
 
 /*--------------раздел expertise--------------------*/
   .expertise {
@@ -647,13 +650,13 @@ a {
 
 /*------------футер----------------------------*/
 
-.foot {
-  height: 700px;
-}
+  .foot {
+    height: 700px;
+  }
 
-.f-left, .f-center, .f-right, .foot-wrapper {
-  width: 100%
-}
+  .f-left, .f-center, .f-right, .foot-wrapper {
+    width: 100%
+  }
 
 
 /*------------dropdown меню для навигации------------------*/
