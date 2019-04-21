@@ -86,49 +86,22 @@ $(document).ready(() => {
   function behavior(){
     //функция определяющая поведение элементов галереи
 
-
-    //инициализация окна, в котором впоследствии
-    //будет отображено кликнутое развёрнутое изображение
-    $('.fullsize').dialog({
-
-                    // уезжает за пределы экрана на дисплеях с разрешением
-                    // ниже 400 в ширину
-                    // фикс требует дополнительного допила
-                    width: '400',
-                    autoOpen: false,
-                    close: function(){
-                                $('.fullsize img').remove() // удаляем img из div'a fullsize
-                                $gal.css('opacity', '1')
-                              },
-                    open: function(){
-                               $gal.css('opacity', '0.2')
-                    }
-                        })
-
     $('.gal_ele').on('click', function() {
 
-      // наименование кликнутого файла
-      var current = $(this).css('background-image')
-                           .split('/')
-                           .slice(-1)[0]
-                           .replace(`")`,``)
+      var curImgPath = $(this).css('background-image')
+      $('.gallery-modal').removeClass('hidden');
+      $('.fullsize-container').css('background-image', curImgPath);
+    })
 
-      //добавлятор изображения в диалоговое окно
-      function addImage(){
-        $('.fullsize').append(`<img src="${basePath}${current}">`);
-        $('.fullsize img').css({display:'block', maxWidth: '100%'})
-      }
+      //-----------закрытие окна по клику---
+    $('.close-fullsize').on('click', ()=> {
+      $('.gallery-modal').addClass('hidden')
+    })
+      //-----------закрытие окна по кнопке escape---
+    $(document).keyup(function(e) {
+      if (e.keyCode == 27) $('.gallery-modal').addClass('hidden')
+    })
 
-      if ($('.fullsize').dialog('isOpen')) {
-        $('.fullsize').dialog('close');
-        addImage();
-        $('.fullsize').dialog('open');
-      }
-      else {
-        addImage();
-        $('.fullsize').dialog('open')
-      }
-      })
   } //конец behavior
 
   behavior();
@@ -201,6 +174,8 @@ $(document).ready(() => {
     //заменяем кнопку свёртки на кнопку подгрузки
     $loadMore.removeClass('hidden');
     $collapse.addClass('hidden');
+
+    $('.our_works').get(0).scrollIntoView({behavior: 'smooth'})
   })
 
 

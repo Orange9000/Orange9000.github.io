@@ -1,0 +1,728 @@
+* {
+  box-sizing: border-box;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  list-style-type: none;
+}
+
+html { overflow-x: hidden; }
+
+a { text-decoration: none; color: inherit;}
+
+
+@font-face {
+    font-family: "pe-icon";
+    src: url("icon-font/fonts/Pe-icon-7-stroke.eot"),
+         url("icon-font/fonts/Pe-icon-7-stroke.svg"),
+         url("icon-font/fonts/Pe-icon-7-stroke.ttf"),
+         url("icon-font/fonts/Pe-icon-7-stroke.woff");
+}
+
+
+
+/* классы для многократного использования */
+
+
+.lato-font { font-family: "Lato", sans-serif; }
+.open-font { font-family: "Open Sans", serif; }
+.white { color: white; }
+.thin { font-weight: 100; }
+.blue { color: #4c76ff; }
+.font-large { font-size: 3em; }
+.font-bold { font-weight: 900; }
+.font-thin { font-weight: 400; }
+.block { display: block; }
+.i-block {display: inline-block; }
+.center { text-align: center;}
+.bg-blue { background-color: rgba(76, 118, 255, 0.85); }
+.dash {
+  color: #4c76ff;
+  font-size: 25px;
+  font-family: "Lato";
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+
+/*-------------section home----------------------------------------------------*/
+
+.up-button {
+  display: none;
+  position: fixed;
+  top: 90%;
+  left: 90%;
+  z-index: 100;
+}
+  .button-container {
+    background-color: grey;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+
+
+
+.home {
+  display: block;
+  height: 780px;
+  background: url("src/bg/top.png");
+  background-size: cover;
+}
+  nav {
+    height: 52px;
+    background-color: rgba(16,22,54,0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+    .logo {
+      font-family: "Lato", sans-serif;
+      color: white;
+      font-weight: 900;
+    }
+      .logo-nav {
+        font-size: 23px;
+      }
+    .navigation li {
+      cursor: pointer;
+    }
+    .nav-container {
+      height: 100%;
+      width: 30%;
+      display: flex;
+      color: white;
+      justify-content: space-between;
+    }
+      .nav-container li { padding-top: 25px; }
+      .nav-container li:hover { border-top: 2px solid #4c76ff; }
+
+    .nav-button { /* mobile */
+      display: none !important;
+    }
+
+
+/* ------next div -------*/
+
+  .home-text-container {
+    opacity: 0;
+    transition: 2s;
+    margin-top: 12%;
+    display: flex;
+    flex-direction: column;
+  }
+  .social {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+    .social li img {
+      margin-right: 8px;
+      margin-left: 8px;
+      width: auto;
+      height: 25px;
+      opacity: 0.3;
+    }
+
+
+/*-----------section Features--------------------------------------------------*/
+
+.features {
+  position: relative;
+  min-height: 400px;
+  background-color: #efefef;
+}
+  .features-top {
+    padding-top: 60px;
+  }
+    .features-top img {
+      width: 20px;
+      height: auto;
+      opacity: 0.3;
+    }
+    .dash-two {
+      margin: 30px 10px 5px 10px;
+      opacity: 0.5;
+      display: inline-block;
+      width: 100px;
+    }
+
+/* ------next div -------*/
+
+  .features-ul {
+    opacity: 0;
+    transition: 1s;
+    left: -30%;
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .features-ul li {
+    width: 33%;
+    padding: 20px 20px;
+  }
+    .features-icon {
+        width: 35px;
+        height: auto;
+        border: 1px solid #4c76ff;
+        border-radius: 50%;
+        padding: 5px 5px 5px 5px;
+      }
+    .features-header {
+      font-size: 18px;
+      line-height: 20px;
+      vertical-align: top;
+    }
+    .features-para {
+      padding-left: 39px; /* размер иконки + граница */
+      width: 80%;
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+
+/*-----------section iphone--------------------------------------------------*/
+
+.iphone {
+  min-height: 700px;
+}
+  .iphone-title {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 50px;
+    opacity: 0.9;
+    font-weight: 600;
+  }
+
+/* ------next div -------*/
+  .iphone-img-container {
+    width: 300px;
+    height: 630px;
+    background-image: url('src/misc/iphone/iphone.png');
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+  }
+
+  .iphone-ul-container {
+    padding: 50px 0 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%; /* оптимизировать для небольших экранов */
+    margin: 0 auto;
+  }
+  .iphone-ul {
+    margin: 0 auto;
+    width: 25%; /* оптимизировать для небольших экранов */
+  }
+  .iphone-ul li {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+  .iphone-ul li:hover {
+    background-color: #fefce9;
+  }
+    .iphone-icon {
+      font-size: 38px;
+      opacity: 0.4;
+    }
+    .iphone-header {
+      padding-left: 35px;
+      opacity: 0.9;
+      line-height: 25px;
+      vertical-align: top;
+    }
+    .iphone-para {
+      padding-left: 75px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+
+/*-----------section works--------------------------------------------------*/
+
+.works {
+  min-height: 500px;
+}
+  .works-header {
+    width: 50%; /* оптимизировать для небольших экранов */
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  .works-selection {
+    padding: 70px 0 80px 0;
+    width: 35%; /* оптимизировать для небольших экранов */
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+    .works-selection li {
+      cursor: pointer;
+      text-align: center;
+      padding: 8px 15px 8px 15px;
+    }
+    .works-selection li:hover {
+      background-color: #4c76ff;
+      border-radius: 5px;
+    }
+
+/*---------------next element------------*/
+
+  .works-gallery {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+    .works-gallery li {
+      cursor: pointer;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      position: relative;
+      width: 25%; /* оптимизировать для небольших экранов */
+      height: 300px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transition: 0.3s linear;
+    }
+    .gallery-overlay {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #4c76ff;
+      opacity: 0;
+    }
+    .gallery-overlay:hover {
+      opacity: 0.8;
+    }
+    .tooptip {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .gallery-modal {
+      top: 0;
+      bottom: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+      .close-fullsize {
+        width: 100%;
+        cursor: pointer;
+        font-size: 50px !important;
+        text-align: right;
+        padding: 2% 5% 0 0;
+      }
+      .fullsize-container {
+        vertical-align: top;
+        width: 80%;
+        height: 70%;
+        margin: 0 auto;
+        overflow: hidden;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+/*-----------section team--------------------------------------------------*/
+
+.team {
+  padding-top: 50px;
+  min-height: 900px;
+}
+  .team-para {
+    padding-top: 50px;
+    width: 50%;
+    margin: auto;
+  }
+
+  .team-people {
+    padding-top: 100px;
+    margin: 0 auto;
+    width: 60%; /* оптимизировать для небольших экранов */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .team-member {
+    width: 23%; /* оптимизировать для небольших экранов */
+  }
+    .team-ph-container {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 350px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .team-overlay {
+      transition: 0.1s linear;
+      padding: 10px 5px 10px 5px;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+    }
+    .team-overlay:hover {
+      background-color: #557dff;
+      opacity: 0.95;
+    }
+    .social-team {
+      padding-top: 80px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+      .social-team li {
+        height: 40px;
+        width: 40px;
+        margin: 0 3px 0 3px;
+        padding: 8px 8px 8px 8px;
+        background-color: #3a56b1;
+      }
+        .social-team img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: scale-down;
+        }
+
+/*-----------section facts--------------------------------------------------*/
+
+
+.facts {
+  min-height: 450px;
+  display: block;
+  background: linear-gradient(rgba(6, 32, 51, 0.8), rgba(6, 32, 51, 0.8)), url('src/bg/bg-facts.jpg');
+  background-size: cover;
+  background-position: center;
+}
+  .facts-ul {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 60%; /* оптимизировать для небольших экранов */
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .facts-ul li {
+    width: 25%; /* оптимизировать для небольших экранов */
+  }
+    .facts-icon-container {
+      margin: 0 auto;
+      height: 110px;
+      width: 110px;
+      font-size: 50px;
+      padding: 30px 30px 30px 30px;
+      border: 1px solid rgba(255,255,255,0.8);
+      border-radius: 50%;
+    }
+      .facts-numbers {
+        transition: 0.2s linear;
+        padding-top: 20px;
+        font-weight: 600;
+      }
+      .facts-text {
+        opacity: 0.8
+      }
+
+/*-----------section discuss--------------------------------------------------*/
+
+
+.discuss {
+  min-height: 600px;
+}
+  .discuss-header {
+    padding-top: 50px;
+    font-size: 20px;
+    opacity: 0.7;
+  }
+  .discuss-container {
+    padding-top: 80px;
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+    .dsc-cont-left { width: 20%; } /* оптимизировать для небольших экранов */
+    .dsc-cont-middle {width: 75%; } /* оптимизировать для небольших экранов */
+      .discuss-container form {
+        width: 100%;
+      }
+        .input {
+          outline: none;
+          padding-top: 50px;
+          border: none;
+          border-bottom: 1px solid grey;
+          padding-bottom: 10px;
+          margin-right: 15px;
+        }
+        .inp-name, .inp-email {
+          width: 48%; /* оптимизировать для небольших экранов */
+        }
+        .inp-message {
+          width: 98%;
+        }
+        .send-button-container {
+          margin-right: 20px;
+          outline: none;
+          float: right;
+          margin-top: 35px;
+          padding: 5px 5px 5px 5px;
+        }
+        .send-button-container:hover {
+          border: 2px solid #4c76ff;
+          border-radius: 5px;
+        }
+          .sub-button {
+            cursor: pointer;
+            border: none;
+            background-color: inherit;
+            font-size: 18px;
+          }
+    .discuss-social {
+      flex-direction: column; /* оптимизировать для небольших экранов */
+    }
+      .discuss-social li {
+        padding-top: 10px;
+      }
+
+/*-----------footer--------------------------------------------------*/
+
+footer {
+  min-height: 280px;
+  background-color: #062033;
+}
+  .footer-container {
+    margin: auto;
+    width: 75%; /* оптимизировать для небольших экранов */
+    display: flex;
+    flex-wrap: wrap;
+  }
+    .f-cont-header {
+      display: block;
+      font-size: 20px;
+      padding-bottom: 30px;
+      opacity: 0.75;
+    }
+    .logo-footer {
+      font-size: 28px;
+    }
+    .footer-section {
+      width: 33%; /* оптимизировать для небольших экранов */
+      padding: 40px 40px;
+    }
+    form {
+      background: transparent;
+      border: 2px solid white;
+      border-radius: 3px;
+    }
+      .footer-form-field {
+        outline: none;
+        padding-left: 10px;
+        background: transparent;
+        border: none;
+        color: white;
+        width: 75%;
+        height: 50px;
+      }
+      .arrow-button {
+        cursor: pointer;
+        vertical-align: middle;
+        float: right;
+        background: transparent;
+        border: none;
+        color: white;
+        padding-right: 20px;
+        height: 50px;
+        outline: none;
+        font-size: 20px;
+      }
+
+
+      .footer-container p {
+        font-weight: 100;
+        line-height: 25px;
+        width: 80%;
+      }
+    .f-section-right-ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+      .f-section-right-ul li {
+        font-size: 13px;
+        margin-bottom: 20px;
+        width: 50%;
+        height: 25%;
+      }
+
+
+
+/*----------для экранов меньше десктопов и ноутбуков итп----*/
+
+
+@media (max-width: 1024px) {
+
+  .up-button {
+    display: block;
+  }
+
+/*----home------*/
+
+  .home { max-height: 500px;}
+  nav { padding: 0 0 0 0; }
+  .logo-nav { display: none; }
+  .nav-container { display: none; }
+  .mobile-nav {
+    display: flex;
+    padding-top: 20px;
+    left: -100%;
+    top: 0;
+    z-index: 1;
+    width: 50%;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 500px;
+  }
+    .nav-button {
+      display: block !important;
+      padding-top: 40px;
+      margin-left: 10%;
+      text-align: left;
+      font-size: 50px !important;
+    }
+    .close-button {
+      text-align: right;
+      font-size: 50px !important;
+      padding-right: 5%;
+    }
+    .mobile-nav li {
+      padding-top: 25px;
+      font-weight: bold;
+      font-size: 20px;
+      margin-left: 15%;
+    }
+      .mobile-nav li:hover { border-top: none;}
+
+
+/*----features------*/
+  .features-top { padding-top: 10px; }
+  .features-ul {
+    padding: 20px 0 20px 0;
+    width: 85%;
+  }
+  .features-ul li {
+    width: 100%;
+    padding: 10px 0 10px 0;
+  }
+  .features-para  {
+    padding-left: 0;
+    width: 100%;
+  }
+
+
+/*----iphone------*/
+  .iphone-title { width: 90%; }
+  .iphone-ul-container { width: 90%; }
+  .iphone-img-container {display: none;}
+  .iphone-ul { width: 100%;}
+  .iphone-ul li { margin: 0 0 30px 0; }
+  .iphone-header, .iphone-para {
+    padding-left: 0;
+  }
+  .iphone-icon, .iphone-header {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+/*----works------*/
+  .works-header, .works-selection { width: 95%; }
+  .works-gallery li {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: 50%;
+  }
+
+
+/*----team------*/
+  .team-header {
+    padding-top: 0px;
+  }
+  .team-para, .team-people {
+    padding: 10px 0 10px 0;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .team-member {
+    width: 47.5%;
+    padding-top: 15px;
+  }
+  .team-ph-container { background-position: top; }
+  .team-people { padding-bottom: 20px; }
+
+/*----facts------*/
+  .facts-ul {
+    width: 95%;
+    padding-bottom: 20px;
+   }
+  .facts-ul li { width: 50%; }
+
+
+/*----discuss------*/
+  .discuss-container {
+    padding-top: 30px;;
+    width: 90%;
+    align-items: center;
+  }
+  .dsc-cont-left, .dsc-cont-middle, .dsc-cont-right{
+    width: 95%;
+    margin-bottom: 20px;
+  }
+    .inp-name, .inp-email, .inp-message { width: 100%; }
+    .send-button-container {
+      display: inline-block;
+      margin: 30px 0 0 0;
+    }
+  .discuss-social {
+    padding-top: 0;
+    margin-top: 0;
+    flex-direction: row;
+    vertical-align: top;
+  }
+
+/*----map-----------*/
+  .map iframe { height: 300px;}
+
+/*----footer------*/
+  .footer-container, .footer-section {
+    padding-top: 10px;
+    width: 95%;
+  }
+}
+
+
+@media (max-width: 568px) {
+  .works-gallery li { width: 100%; }
+
+  .team-para, .team-people, .team-member {
+    padding: 10px 0 10px 0;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+
+
+/*------для тестов--------*/
+
+.visual-hide { opacity: 0; }
+.hide { display: none !important; }

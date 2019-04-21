@@ -169,6 +169,7 @@ i {
 /*---------cтили контейнеров------------*/
 
 .folio li {
+  padding-top: 40px;
   border-top: 1px solid rgba(0,0,0,0.2);
   margin-bottom: 20px;
 }
